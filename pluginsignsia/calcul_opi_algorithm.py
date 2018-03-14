@@ -97,9 +97,7 @@ class CalculOpiAlgorithm(QgsProcessingAlgorithm):
         Here is where the processing itself takes place.
         """
 
-        # Retrieve the feature source and sink. The 'dest_id' variable is used
-        # to uniquely identify the feature sink, and must be included in the
-        # dictionary returned by the processAlgorithm function.
+        # Retrieve the feature source and sink. The 'dest_id' v
         source = self.parameterAsSource(parameters, self.INPUT, context)
         (sink, dest_id) = self.parameterAsSink(parameters, self.OUTPUT,
                 context, source.fields(), source.wkbType(), source.sourceCrs())
