@@ -31,7 +31,7 @@ __copyright__ = '(C) 2018 by Equipe produit Imagerie et departement de la photog
 __revision__ = '$Format:%H$'
 
 from qgis.core import QgsProcessingProvider
-from .IGN_SIA_algorithm import PluginsIgnSiaAlgorithm
+from .calcul_opi_algorithm import CalculOpiAlgorithm
 
 
 class PluginsIgnSiaProvider(QgsProcessingProvider):
@@ -40,7 +40,7 @@ class PluginsIgnSiaProvider(QgsProcessingProvider):
         QgsProcessingProvider.__init__(self)
 
         # Load algorithms
-        self.alglist = [PluginsIgnSiaAlgorithm()]
+        self.alglist = [CalculOpiAlgorithm()]
 
     def unload(self):
         """
